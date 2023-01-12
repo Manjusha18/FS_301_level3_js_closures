@@ -10,6 +10,7 @@ const todoList = () => {
     const overdue = () => {
       // Write the date check condition here and return the array of overdue items accordingly.
       // FILL YOUR CODE HERE
+
       
       var i;
       var List1 = [];
@@ -27,7 +28,7 @@ const todoList = () => {
       
       var i;
       var List2 = [];
-      for (i in all) {
+      for (i=0 ; i<all.length ; i++) {
         if (all[i].dueDate === today) {
             List2.push(all[i]);
         }
@@ -41,7 +42,7 @@ const todoList = () => {
       
       var i;
       var List3 = [];
-      for (i in all) {
+      for (i=0 ; i<all.length ; i++) {
         if (all[i].dueDate > today) {
             List3.push(all[i]);
         }
@@ -67,7 +68,7 @@ const todoList = () => {
             display_List.push(`[ ] ${list[i].title}`)
           }
           else {
-            display_List.push(`[ ] ${list[i].title} ${list[i].dueDate}`)
+            display_List.push(`[ ] ${list[i].title}. ${list[i].dueDate}`)
           }
         }
 
